@@ -1,0 +1,176 @@
+{
+	"id": "141c339b-0640-484d-a88e-4f11f990a08f",
+	"name": "商品模块",
+	"timestamp": "2026-07-05T14:43:11.243Z",
+	"collection_id": "56371396-17d0045c-9ae2-45f8-b359-4edceb19c5d7",
+	"folder_id": 0,
+	"environment_id": "56371396-2bc6b71a-33f6-4890-8abf-8d3450143251",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-07-05T14:43:10.377Z",
+	"totalFail": 5,
+	"results": [
+		{
+			"id": "ed264e4f-c19b-42b0-a562-1576946c972e",
+			"name": "电商登录",
+			"url": "http://test-cn.your-api-server.com/user/login",
+			"time": 81,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"登录成功，返回200": true,
+				"返回token字段": false
+			},
+			"testPassFailCounts": {
+				"登录成功，返回200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"返回token字段": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"登录成功，返回200": true,
+					"返回token字段": false
+				}
+			]
+		},
+		{
+			"id": "0bd39d8b-4c72-4d25-96cd-fd2341aaa3a6",
+			"name": "商品列表",
+			"url": "http://test-cn.your-api-server.com/goods/list?page=1&size=10",
+			"time": 73,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"商品列表返回200状态码": true,
+				"返回包含data字段": false,
+				"商品列表为数组": false
+			},
+			"testPassFailCounts": {
+				"商品列表返回200状态码": {
+					"pass": 1,
+					"fail": 0
+				},
+				"返回包含data字段": {
+					"pass": 0,
+					"fail": 1
+				},
+				"商品列表为数组": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"商品列表返回200状态码": true,
+					"返回包含data字段": false,
+					"商品列表为数组": false
+				}
+			]
+		},
+		{
+			"id": "b8b02897-81ed-4a5c-96bd-272b4b3821e0",
+			"name": "创建订单",
+			"url": "http://test-cn.your-api-server.com/order/create",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"创建订单返回200": true,
+				"返回存在orderId": false
+			},
+			"testPassFailCounts": {
+				"创建订单返回200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"返回存在orderId": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"创建订单返回200": true,
+					"返回存在orderId": false
+				}
+			]
+		},
+		{
+			"id": "6df44d55-7ce1-4793-bd61-1c075b3083cb",
+			"name": "取消订单",
+			"url": "http://test-cn.your-api-server.com/order/cancel",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"取消订单接口返回200": true,
+				"订单取消成功标识": false
+			},
+			"testPassFailCounts": {
+				"取消订单接口返回200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"订单取消成功标识": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"取消订单接口返回200": true,
+					"订单取消成功标识": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 290,
+	"collection": {
+		"requests": [
+			{
+				"id": "ed264e4f-c19b-42b0-a562-1576946c972e",
+				"method": "POST"
+			},
+			{
+				"id": "0bd39d8b-4c72-4d25-96cd-fd2341aaa3a6",
+				"method": "GET"
+			},
+			{
+				"id": "b8b02897-81ed-4a5c-96bd-272b4b3821e0",
+				"method": "POST"
+			},
+			{
+				"id": "6df44d55-7ce1-4793-bd61-1c075b3083cb",
+				"method": "PUT"
+			}
+		]
+	}
+}
